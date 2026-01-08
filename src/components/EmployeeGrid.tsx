@@ -33,6 +33,15 @@ import '../styles/EmployeeGrid.css';
 
 const CONTACT_MASK = '(000) 000-0000';
 
+const columnHeaderIconMap: Record<string, string> = {
+  fullName: 'e-user',
+  email: 'e-send',
+  contact: 'e-people',
+  joinDate: 'e-day',
+  active: 'e-select-all',
+  rating: 'e-star-filled',
+};
+
 export default function EmployeeGrid({
   data,
   currentRole,
@@ -132,6 +141,16 @@ export default function EmployeeGrid({
 
       if (currentRole === 'Manager' && fieldName && !['rating', 'contact'].includes(fieldName)) {
         updatedCol.allowEditing = false;
+      }
+
+      const iconClass = columnHeaderIconMap[fieldName];
+      if (iconClass) {
+        updatedCol.headerTemplate = (): JSX.Element => (
+            <div className="grid-header-template">
+            <i className={`e-icons ${iconClass}`} aria-hidden="true" />
+            <span>{updatedCol.headerText}</span>
+          </div>
+        );
       }
 
       return updatedCol;

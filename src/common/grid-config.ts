@@ -54,19 +54,21 @@ export const ROLE_CONFIG: RoleConfigMap = {
   },
 };
 
+
 export const columns: ColumnModel[] = [
-  { field: 'id', headerText: 'ID', isPrimaryKey: true, width: 100, textAlign: 'Right', allowEditing: false },
-  { field: 'fullName', headerText: 'Name', type: 'string', width: 160, allowEditing: false },
-  { field: 'email', headerText: 'Email', width: 240, allowEditing: false },
-  { field: 'joinDate', headerText: 'Join Date', type: 'date', editType: 'datepickeredit', format: 'yMd', width: 130, allowEditing: false },
-  { field: 'department', headerText: 'Department', width: 140 },
-  { field: 'role', headerText: 'Role', width: 120, editType: 'dropdownedit' },
-  { field: 'title', headerText: 'Title', width: 140 },
-  { field: 'salary', headerText: 'Salary', type: 'number', editType: 'numericedit', format: 'C0', textAlign: 'Right', width: 120 },
-  { field: 'active', headerText: 'Active', type: 'boolean', editType: 'booleanedit', width: 100, textAlign: 'Center' },
+  { field: 'id', headerText: 'ID', isPrimaryKey: true, width: 100, textAlign: 'Right', allowEditing: false, visible: false },
+  { field: 'fullName', headerText: 'Name', type: 'string', width: 180, allowEditing: false },
+  { field: 'title', headerText: 'Title', width: 160 },
+  { field: 'department', headerText: 'Department', width: 160 },
+  { field: 'role', headerText: 'Role', width: 140, editType: 'dropdownedit' },
+  { field: 'email', headerText: 'Email', width: 260, allowEditing: false },
+  { field: 'contact', headerText: 'Contact', width: 180 },
+  { field: 'joinDate', headerText: 'Join Date', type: 'date', editType: 'datepickeredit', format: 'yMd', width: 140, allowEditing: false },
+  { field: 'active', headerText: 'Active', type: 'boolean', editType: 'booleanedit', width: 110, textAlign: 'Center' },
   { field: 'rating', headerText: 'Rating', type: 'number', width: 120, editType: 'numericedit' },
-  { field: 'contact', headerText: 'Contact', width: 170 },
+  { field: 'salary', headerText: 'Salary', type: 'number', editType: 'numericedit', format: 'C0', textAlign: 'Right', width: 130 },
 ];
+
 
 export const DEMO_ACCOUNTS: DemoAccount[] = [
   { role: 'Admin', userId: 'lucas', password: 'sunset42' },
