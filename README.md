@@ -2,7 +2,7 @@
 
 This React application demonstrates Role Based Access Control (RBAC) for viewing and managing employee data. After login, users see an interface that adapts to their role, controlling both which columns are visible and which actions (Add, Edit, Delete) are allowed in the Syncfusion React Grid.
 
-Use any of the predefined accounts (listed below and sourced from `src/data/grid-config.js`) to explore the role-specific experience: 
+Use any of the predefined accounts (listed below and sourced from `src\common\grid-config.ts`) to explore the role-specific experience: 
 | Role     | User ID  | Password     | Notes                              |
 |----------|----------|--------------|------------------------------------|
 | Admin    | `lucas`  | `sunset42`   | Full CRUD plus all grid columns.   |
@@ -18,20 +18,25 @@ Use any of the predefined accounts (listed below and sourced from `src/data/grid
 ## Project Structure
 ```md
 src
-├── main.jsx
+├── main.tsx
 │
-├── css
-│   └── style.css  # Global Syncfusion and custom theme overrides
+├── common
+│   └── grid-config.ts    # RBAC and grid column configuration
+│
+├── components
+│   ├── EmployeeGrid.tsx  # Syncfusion Grid wired to role config
+│   ├── Home.tsx          # App shell, login flow, data bootstrapping
+│   ├── Login.tsx         # Credential form and validation
+│   └── Navbar.tsx        # Profile menu with logout
 │
 ├── data
-│   ├── data-source.js  # Mock employee generator
-│   └── grid-config.js  # RBAC and grid column configuration
+│   └── data-source.ts    # Mock employee generator
 │
-└── script
-    ├── EmployeeGrid.jsx  # Syncfusion Grid wired to role config
-    ├── Home.jsx  # App shell, login flow, data bootstrapping
-    ├── Login.jsx  # Credential form and validation
-    └── Navbar.jsx  # Profile menu with logout
+└── styles
+    ├── EmployeeGrid.css  # Styles for the employee grid component
+    ├── Home.css          # Styles for the home page layout
+    ├── Login.css         # Styles for the login form and page
+    └── Navbar.css        # Styles for the navigation bar
 ```
 
 ## Roles and Access
@@ -46,14 +51,14 @@ src
   - Columns: Name, Email, Department, Title, Active, Join Date, Contact
   - Permissions: Read-only
 
-## Grid Configuration (`src/data/grid-config.js`)
+## Grid Configuration (`src\common\grid-config.ts`)
 
 This file centralizes every grid-specific rule:
 
 - `roles`: the master list of supported application roles.
-- `ROLE_CONFIG`: per-role capabilities, combining CRUD permissions (`canAdd`, `canEdit`, `canDelete`) with the `visible` column list that the grid enforces on login. `EmployeeGrid.jsx` reads these settings to compute toolbar options, edit behavior, and column visibility.
+- `ROLE_CONFIG`: per-role capabilities, combining CRUD permissions (`canAdd`, `canEdit`, `canDelete`) with the `visible` column list that the grid enforces on login. `EmployeeGrid.tsx` reads these settings to compute toolbar options, edit behavior, and column visibility.
 - `columns`: the schema shared by all roles. Each column object defines field name, header text, editor type, formatting, alignment, primary key status, and whether editing is allowed.
-- `DEMO_ACCOUNTS`: the predefined login users (mirroring the credential list above) used by `Login.jsx` to validate the credential form.
+- `DEMO_ACCOUNTS`: the predefined login users (mirroring the credential list above) used by `Login.tsx` to validate the credential form.
 
 ## Setup & Run
 Follow these steps to set up and run the application:
