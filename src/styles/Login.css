@@ -1,0 +1,62 @@
+@import "@syncfusion/ej2-inputs/styles/bootstrap5.3.css";
+
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  background: radial-gradient(circle at 25% 20%, rgba(99, 102, 241, 0.25), transparent 45%),
+    linear-gradient(135deg, #0b1120 0%, #101828 45%, #1f2937 100%);
+}
+
+.login-card {
+  width: min(480px, 100%);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 20px;
+  background: linear-gradient(
+    160deg,
+    rgba(248, 250, 255, 0.97),
+    rgba(222, 231, 255, 0.95),
+    rgba(198, 216, 255, 0.92)
+  );
+  box-shadow: 0 35px 70px rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.login-card .card-body {
+  background: transparent;
+}
+
+.form-field-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.form-label-inline {
+  width: 80px;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.form-field-inline .e-input-group,
+.form-field-inline .e-input-group.e-control-wrapper {
+  flex: 1;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.login-submit-btn {
+  width: auto;
+  min-width: 140px;
+  border-radius: 48px;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+}
