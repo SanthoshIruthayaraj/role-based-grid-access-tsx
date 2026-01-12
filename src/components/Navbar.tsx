@@ -67,11 +67,8 @@ export default function Navbar({ user, title, onLogout }: NavbarProps): JSX.Elem
                 <div className="profile-avatar">{displayInitial}</div>
                 <div className="profile-info">
                   <div className="profile-info__name">{displayName}</div>
-                  <div className="profile-info__meta">
-                    {userId}
-                    <span className="profile-info__role">({displayRole})</span>
-                  </div>
-                  <div className="profile-info__email">{userId}@example.org</div>
+                  <div className="profile-info__email">{userId}</div>
+                  <span className="profile-info__role">({displayRole})</span>
                 </div>
               </section>
 

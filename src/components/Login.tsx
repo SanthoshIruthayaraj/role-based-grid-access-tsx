@@ -75,11 +75,11 @@ export default function Login({ onLogin }: LoginProps): JSX.Element {
           <form className="d-grid gap-3" onSubmit={handleFormSubmit}>
             <div className="form-field-inline">
               <label htmlFor="userId" className="form-label form-label-inline">
-                User ID: <span className="field-accent" />
+                Email: <span className="field-accent" />
               </label>
               <TextBoxComponent
                 id="userId"
-                placeholder="Enter your user id"
+                placeholder="Enter your email"
                 value={credentials.userId}
                 ref={userInputRef}
                 change={handleUserChange}

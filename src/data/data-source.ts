@@ -54,7 +54,7 @@ export function generateEmployees(totalEmployees = 36): Employee[] {
     employees.push({
       id: buildEmployeeId(employeeIndex),
       fullName,
-      email: `${firstName.toLowerCase()}.${lastName.toLowerCase()}${employeeIndex}@example.org`,
+      email: `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.org`,
       department: departmentName,
       role,
       title: pickOne(jobTitles),

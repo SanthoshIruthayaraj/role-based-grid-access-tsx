@@ -57,11 +57,11 @@ export const ROLE_CONFIG: RoleConfigMap = {
 
 export const columns: ColumnModel[] = [
   { field: 'id', headerText: 'ID', isPrimaryKey: true, width: 100, textAlign: 'Right', allowEditing: false, visible: false },
-  { field: 'fullName', headerText: 'Name', type: 'string', width: 180, allowEditing: false },
-  { field: 'title', headerText: 'Title', width: 160 },
-  { field: 'department', headerText: 'Department', width: 160 },
+  { field: 'fullName', headerText: 'Name', type: 'string', width: 150, allowEditing: false },
+  { field: 'title', headerText: 'Title', width: 200, editType: 'dropdownedit' },
+  { field: 'department', headerText: 'Department', width: 160, editType: 'dropdownedit' },
   { field: 'role', headerText: 'Role', width: 140, editType: 'dropdownedit' },
-  { field: 'email', headerText: 'Email', width: 260, allowEditing: false },
+  { field: 'email', headerText: 'Email', width: 260 },
   { field: 'contact', headerText: 'Contact', width: 180, textAlign: 'Center' },
   { field: 'joinDate', headerText: 'Join Date', type: 'date', editType: 'datepickeredit', format: 'yMd', textAlign: 'Right', width: 140, allowEditing: false },
   { field: 'active', headerText: 'Active', type: 'boolean', editType: 'booleanedit', width: 110, textAlign: 'Center' },
@@ -71,7 +71,7 @@ export const columns: ColumnModel[] = [
 
 
 export const DEMO_ACCOUNTS: DemoAccount[] = [
-  { role: 'Admin', userId: 'lucas', password: 'sunset42' },
-  { role: 'Manager', userId: 'mia', password: 'harbor78' },
-  { role: 'Employee', userId: 'oliver', password: 'meadow25' },
+  { role: 'Admin', userId: 'oliver.johnson@example.org', password: 'OliverJohnson' },
+  { role: 'Manager', userId: 'emma.miller@example.org', password: 'EmmaMiller' },
+  { role: 'Employee', userId: 'james.smith@example.org', password: 'JamesSmith' },
 ];

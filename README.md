@@ -3,11 +3,11 @@
 This React application demonstrates Role Based Access Control (RBAC) for viewing and managing employee data. After login, users see an interface that adapts to their role, controlling both which columns are visible and which actions (Add, Edit, Delete) are allowed in the Syncfusion React Grid.
 
 Use any of the predefined accounts (listed below and sourced from `src\common\grid-config.ts`) to explore the role-specific experience: 
-| Role     | User ID  | Password     | Notes                              |
+| Role     | Email  | Password     | Notes                              |
 |----------|----------|--------------|------------------------------------|
-| Admin    | `lucas`  | `sunset42`   | Full CRUD plus all grid columns.   |
-| Manager  | `mia`| `harbor78` | Edit-only access with key columns. |
-| Employee | `oliver`| `meadow25`| Read-only view of essential fields.|
+| Admin    | `oliver.johnson@example.org`  | `OliverJohnson`   | Full CRUD plus all grid columns.   |
+| Manager  | `emma.miller@example.org`| `EmmaMiller` | Edit-only access with key columns. |
+| Employee | `james.smith@example.org`| `JamesSmith`| Read-only view of essential fields.|
 
 ## Key Capabilities
 

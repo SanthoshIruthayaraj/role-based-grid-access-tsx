@@ -58,4 +58,5 @@ export interface EmployeeGridProps {
 
 export interface ContactEditTemplateProps extends Partial<Employee> {
   rowData?: Employee;
+  column?: ColumnModel
 }
